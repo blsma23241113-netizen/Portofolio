@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-dark: #0e0e0e;
+            --bg-light: #141414;
+            --text: #e5e5e5;
+            --gray: #9a9a9a;
+            --red: #7a1a1a;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Courier Prime', monospace;
+            color: var(--text);
+
+            /* CHECKERBOARD BACKGROUND */
+            background-color: var(--bg-dark);
+            background-image:
+                linear-gradient(45deg, var(--bg-light) 25%, transparent 25%),
+                linear-gradient(-45deg, var(--bg-light) 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, var(--bg-light) 75%),
+                linear-gradient(-45deg, transparent 75%, var(--bg-light) 75%);
+            background-size: 40px 40px;
+            background-position: 0 0, 0 20px, 20px -20px, -20px 0;
+        }
+
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 90px 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        header {
+        background-color: #050505;
+        color: whitesmoke;
+        padding: 20px 0;
+        text-align: center;
+        width: 100%;
+        }
+
+        header {
+            margin-bottom: 80px;
+        }
+
+        header h1 {
+            font-family: 'Special Elite', monospace;
+            font-size: 2.6rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        header p {
+            font-size: 0.85rem;
+            color: var(--gray);
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 70px;
+        }
+
+        h2 {
+            font-family: 'Special Elite', monospace;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: var(--red);
+        }
+
+        p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        /* PROJECTS */
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .project {
+            padding: 15px 20px;
+            background: rgba(0,0,0,0.6);
+            border-left: 2px solid var(--red);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateX(10px);
+            background: rgba(0,0,0,0.8);
+            border-color: var(--text);
+            box-shadow: 0 0 15px var(--red);
+        }
+
+        .project h3 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .project span {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        /* SKILLS */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            font-size: 0.75rem;
+            padding: 6px 12px;
+            border: 1px dashed var(--gray);
+            color: var(--gray);
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .skill:hover {
+            background: var(--red);
+            color: var(--text);
+            border-color: var(--text);
+            box-shadow: 0 0 10px var(--red);
+        }
+
+        /* LINKS */
+        a {
+            color: var(--red);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--red);
+        }
+
+        a:hover {
+            color: var(--text);
+            border-color: var(--text);
+        }
+
+        footer {
+            margin-top: 100px;
+            font-size: 0.75rem;
+            color: var(--gray);
+            text-align: center;
+        }
+
+        /* BLOOD DRIP */
+        .blood {
+            position: fixed;
+            top: 0;
+            width: 6px;
+            height: 90px;
+            background: linear-gradient(to bottom, var(--red), transparent);
+            animation: drip 3s infinite;
+            opacity: 0.8;
+            z-index: 1;
+        }
+
+        @keyframes drip {
+            0% { height: 0; }
+            50% { height: 90px; }
+            100% { height: 0; }
+        }
+
+        /* BLOOD SPLATTER */
+        .splatter {
+            position: fixed;
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, var(--red) 20%, transparent 60%);
+            opacity: 0.15;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BLOOD DRIPS -->
+    <div class="blood" style="left:10%; animation-delay:0s"></div>
+    <div class="blood" style="left:35%; animation-delay:1s"></div>
+    <div class="blood" style="left:60%; animation-delay:0.5s"></div>
+    <div class="blood" style="left:85%; animation-delay:1.5s"></div>
+
+    <!-- BLOOD SPLATTER -->
+    <div class="splatter" style="top:20%; left:5%;"></div>
+    <div class="splatter" style="top:65%; right:10%;"></div>
+
+    <div class="container">
+
+        <header>
+            <h1>Karuna</h1>
+            <p>artist • illustrator • student</p>
+        </header>
+
+        <section>
+            <h2>about</h2>
+            <p>
+                Nama saya Ni Putu Karuna Gayatri, saya adalah siswa kelas 12 SMA Budi Luhur.
+                Hobi saya adalah menggambar, saya suka menggambar sejak kecil dan sudah pernah membuat
+                beberapa proyek pribadi dan memenangkan beberapa lomba.
+            </p>
+        </section>
+
+        <section>
+            <h2>portofolio</h2>
+            <div class="projects">
+                <div class="project" onclick="alert('Project: Portfolio')">
+                    <h3>Painting</h3>
+                    <img src="painting.jpg" width="400" height="260">
+                    <span>cat air</span>
+                    <img src="cat poster.jpg" widtg="400" height="250">
+                    <span>cat poster</span>
+                </div>
+                <div class="project" onclick="alert('Project: Landing Page')">
+                    <h3>Traditional art</h3>
+                    <img src="Hikari and Kisa.jpg" width="300">
+                    <span>Hikari and Kisa</span>
+                    <img src="Karuna and boyfriend.jpeg" width="300">
+                    <span>Karuna with Boyfriend sketch</span>
+                </div>
+                <div class="project" onclick="alert('Project: UI Concept')">
+                    <h3>Digital art</h3>
+                    <img src="OC Helena concept.jpg" width="300">
+                    <span>OC Helena concept</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>skills</h2>
+            <div class="skills">
+                <div class="skill">drawing</div>
+                <div class="skill">designing</div>
+                <div class="skill">lore writing</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>contact</h2>
+            <p>
+                <a href="#">instagram: @y__atri</a> /
+                <a href="#">whatsapp: +6281389098477</a> /
+                <a href="#">email: karunagayatri207@gmail.com</a>
+            </p>
+        </section>
+
+        <footer>
+            ~ SO LONG AND GOODNIGHT ~
+        </footer>
+
+    </div>
+
+</body>
+</html>
