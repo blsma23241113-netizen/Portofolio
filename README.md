@@ -1,1 +1,0 @@
-art portofolio Karuna
